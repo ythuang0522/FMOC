@@ -24,3 +24,5 @@ OutputFile.fa : Output file of corrected reads.
 -k : the kmer size for identifying solid kmers during seeding stage.
 
 -K : the kmer size when aligning compressed reads against the query during FM-index extension.
+
+-t : number of threads.
