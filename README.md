@@ -1,21 +1,21 @@
 # Introduction
-FMOE is an overlap-based error-correction algorithm using FM-index.
+FMOC is an overlap-based error-correction algorithm using FM-index. The algoritm identifies overlapping reads w.r.t a query read using the seed-and-extend alignment aginst compressed reads. Errors are then corrected using major k-mers from overlapping reads.
 
 # Compile
-FMOE utilizes zlib and Google Sparsehash libraries. After installing the two dependencies, compile FMOE by typing 
+FMOC utilizes zlib and Google Sparsehash libraries. After installing the two dependencies, compile FMOC by typing 
 
       1. ./autogen.sh 
       2. ./configure
       3. make -j 8
 
-An executable program called FMOE will be found under the FMOE folder.
+An executable program called FMOC will be found under the FMOC folder.
 
 # Execution
-FMOE tales fasta as input. If your reads are original Illumina PE reads in fastq format (e.g., R1.fq and R2.fq), you should run preprocess to discard quality and convert to fasta format.
+FMOC tales fasta as input. If your reads are original Illumina PE reads in fastq format (e.g., R1.fq and R2.fq), you should run preprocess to discard quality and convert to fasta format.
 
-	./FMOE preprocess --discard-quality -p 1 R1.fq R2.fq -o InputFile.fa
-	./FMOE index -t 20 InputFile.fa
-	./FMOE correct -t 20 -k 31 -K 15 InputFile.fa -o OutputFile.fa
+	./FMOC preprocess --discard-quality -p 1 R1.fq R2.fq -o InputFile.fa
+	./FMOC index -t 20 InputFile.fa
+	./FMOC correct -t 20 -k 31 -K 15 InputFile.fa -o OutputFile.fa
 
 InputFile.fa : Input file of raw reads
 

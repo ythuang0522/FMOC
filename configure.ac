@@ -1,9 +1,9 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
-AC_INIT(FMOE, 0.0.1, ythuang@cs.ccu.edu.tw)
+AC_INIT(FMOC, 0.0.1, ythuang@cs.ccu.edu.tw)
 AM_INIT_AUTOMAKE(foreign)
-AC_CONFIG_SRCDIR([FMOE/StriDe.cpp])
+AC_CONFIG_SRCDIR([FMOC/StriDe.cpp])
 AC_CONFIG_HEADER([config.h])
 m4_include([m4/m4_ax_openmp.m4])
 
@@ -110,6 +110,6 @@ AC_CONFIG_FILES([Makefile
 		Concurrency/Makefile
 		SuffixTools/Makefile
 		FMIndexWalk/Makefile
-		FMOE/Makefile])
+		FMOC/Makefile])
 
 AC_OUTPUT

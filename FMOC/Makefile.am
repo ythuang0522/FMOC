@@ -1,6 +1,6 @@
-bin_PROGRAMS = FMOE
+bin_PROGRAMS = FMOC
 
-FMOE_CPPFLAGS = \
+FMOC_CPPFLAGS = \
 	-I$(top_srcdir)/Util \
 	-I$(top_srcdir)/Bigraph \
 	-I$(top_srcdir)/SuffixTools \
@@ -11,7 +11,7 @@ FMOE_CPPFLAGS = \
 	-I$(top_srcdir)/Thirdparty \
 	-I$(top_srcdir)/FMIndexWalk
 
-FMOE_LDADD = \
+FMOC_LDADD = \
 	$(top_builddir)/StringGraph/libstringgraph.a \
 	$(top_builddir)/Concurrency/libconcurrency.a \
 	$(top_builddir)/Algorithm/libalgorithm.a \
@@ -22,9 +22,9 @@ FMOE_LDADD = \
 	$(top_builddir)/Thirdparty/libthirdparty.a \
 	$(top_builddir)/FMIndexWalk/libfmindexwalk.a
 
-FMOE_LDFLAGS = -pthread
+FMOC_LDFLAGS = -pthread
 
-FMOE_SOURCES = StriDe.cpp \
+FMOC_SOURCES = StriDe.cpp \
 		strideall.cpp strideall.h\
               index.cpp index.h \
               overlap.cpp overlap.h \

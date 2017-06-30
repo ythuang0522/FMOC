@@ -11,7 +11,7 @@
 #include "SeqReader.h"
 #include "SGAlgorithms.h"
 #include "SGVisitors.h"
-#include "../FMOE/SGACommon.h"
+#include "../FMOC/SGACommon.h"
 
 StringGraph* SGUtil::loadASQG(const StringVector & filenameList, const unsigned int minOverlap, bool allowContainments , size_t maxEdges ,GraphColor c)
 {
